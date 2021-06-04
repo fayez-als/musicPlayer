@@ -28,6 +28,7 @@
     width: 85%;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
     
 }
 
@@ -44,7 +45,7 @@
 }
 .infos{
     
-    transform: translate(0,-70px);
+    transform: translate(0,-80px);
 }
 
 h3{ color: rgb(68, 66, 66);
@@ -73,4 +74,12 @@ h4{ color: rgb(68, 66, 66);
 
   .lower{
     transform: translate(0,-10px);
+  }
+
+
+  .inputrange{
+      opacity:0;
+      width:85%;
+      transform:translate(0,-12px);
+      cursor:pointer;
   }
