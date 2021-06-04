@@ -150,7 +150,7 @@ export function Player(props){
 
         <div className='player'>
             
-        <div style={{backgroundImage:`url(/${songsList[nowPlaying].img})`}}className='picture'></div>
+        <div className='picture'> <img src={songsList[nowPlaying].img}/></div>
         <div className='infos'>
             <Typography color='secondary' variant='h6'>{songsList[nowPlaying].text}</Typography>
             <Typography color='secondary' variant='subtitle1'>{songsList[nowPlaying].singer}</Typography>
