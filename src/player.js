@@ -107,8 +107,8 @@ export function Player(props){
     function timeUpdate(e){
         setCurrentTime(e.target.currentTime)
        
-    }
     
+    }
     function loadUpdate(e){
         setDuration(e.target.duration)
     }
@@ -152,8 +152,9 @@ export function Player(props){
             
         <div style={{backgroundImage:`url(/${songsList[nowPlaying].img})`}}className='picture'></div>
         <div className='infos'>
-        <h3>{songsList[nowPlaying].text}</h3>
-        <h4>{songsList[nowPlaying].singer}</h4>
+            <Typography variant='h6'>{songsList[nowPlaying].text}</Typography>
+            <Typography variant='subtitle1'>{songsList[nowPlaying].singer}</Typography>
+        
         <div className='lower'> 
         
  
