@@ -29,9 +29,15 @@ export function Player(props){
     const [event,setEvent] = useState('')
 
     const [duration,setDuration] = useState(0)
+
     const [currentTime,setCurrentTime] = useState(0)
+
     const [progress,setProgress] = useState(0)
+
     const [nowPlaying,setNowPlaying] =useState(0)
+    const [skipping,setSkipping] = useState(false)
+    
+   
     
 
 
@@ -39,13 +45,46 @@ export function Player(props){
     useEffect(()=>{
         setProgress((currentTime/duration)*100)
         
-        if(currentTime>=duration-1){
-            Next()
-
-        }
+        
+        
+        
 
 
     })
+
+
+    useEffect(()=>
+    {if(currentTime>40){
+        setSkipping(true)
+
+    }
+
+
+    if(skipping){
+        if(currentTime>=duration-1){
+            Next()
+            setSkipping(false)
+        }
+    }
+
+
+
+
+})
+
+
+
+
+
+
+   
+
+   
+
+
+
+
+
     
     
 
@@ -67,7 +106,9 @@ export function Player(props){
 
     function timeUpdate(e){
         setCurrentTime(e.target.currentTime)
+       
     }
+    
     function loadUpdate(e){
         setDuration(e.target.duration)
     }
